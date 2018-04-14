@@ -49,4 +49,24 @@ public class PassengerCheckinServiceImpl implements PassengerCheckinService {
         parameters.put("isBillID",isBillID);
         return passengerCheckinMapper.countPartPassengerCheckinByRoomNameAndBillState(parameters);
     }
+
+    @Override
+    public int insert(PassengerCheckin record) {
+        return passengerCheckinMapper.insert(record);
+    }
+
+    @Override
+    public int insertSelective(PassengerCheckin record) {
+        return passengerCheckinMapper.insertSelective(record);
+    }
+
+    @Override
+    public PassengerCheckin queryPassengerCheckinByPassengerCheckInId(String passengerCheckInId) {
+        return passengerCheckinMapper.queryPassengerCheckinByPassengerCheckInId(passengerCheckInId);
+    }
+
+    @Override
+    public int updateByPrimaryKeySelective(PassengerCheckin record) {
+        return passengerCheckinMapper.updateByPrimaryKeySelective(record);
+    }
 }
